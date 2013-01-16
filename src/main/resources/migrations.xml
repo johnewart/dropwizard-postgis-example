@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <changeSet id="1" author="johnewart">
+        <comment>Initial points table</comment>
+        <createTable schemaName="tokoro" tableName="locations">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="street1" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="street2" type="varchar(255)"/>
+            <column name="city" type="varchar(255)"/>
+            <column name="state" type="varchar(255)"/>
+            <column name="zipcode" type="integer"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="2" author="johnewart">
+        <comment>Add GeoSpatial point to locations</comment>
+        <sql>SELECT AddGeometryColumn ('tokoro','locations','point',4326,'POINT',2)</sql>
+    </changeSet>
+</databaseChangeLog>
