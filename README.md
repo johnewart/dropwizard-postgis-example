@@ -11,4 +11,5 @@ Setup should be pretty simple:
 3. Edit src/main/resources/tokoro.yml with your PostgreSQL settings (username, host, password, db, etc.)
 4. Run the migration via _db migrate src/main/resources/tokoro.yml_
 5. Start the server via _server src/main/resources/tokoro.yml_
+6. Hit the server
 
