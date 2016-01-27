@@ -2,7 +2,7 @@ johnewart/dropwizard-postgis-example:
 
   #Learn about the distelli-manifest.yml at https://www.distelli.com/docs/reference/distelli-manifest
   PkgInclude:
-    - ["target/*.jar"]
+    - "target/*.jar"
 
   Build:
     - echo "Begin Build"
