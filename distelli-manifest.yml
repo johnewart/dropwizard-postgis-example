@@ -18,4 +18,4 @@ johnewart/dropwizard-postgis-example:
     - echo "Begin PostInstall"
 
   Exec:
-    - java -jar Tokoro-1.0.jar
+    - java -jar target/Tokoro-1.0.jar
